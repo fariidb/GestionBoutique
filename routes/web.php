@@ -25,3 +25,13 @@ Route::get('/login', function ()
 {
     return view('login');
 });
+
+Route::get('/magasin', function ()
+{
+    return view('magasin');
+});
+
+Route::get('/reparation', function ()
+{
+    return view('reparation');
+});
