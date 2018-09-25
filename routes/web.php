@@ -26,12 +26,12 @@ Route::get('/login', function ()
     return view('login');
 });
 
-Route::get('/magasin', function ()
+Route::get('/login/magasin', function ()
 {
     return view('magasin');
 });
 
-Route::get('/reparation', function ()
+Route::get('/login/reparation', function ()
 {
     return view('reparation');
 });

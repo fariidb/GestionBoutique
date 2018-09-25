@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,50 +19,22 @@
 <body>
 
 <header>
-    {{--<div class="collapse bg-dark" id="navbarHeader">--}}
-    {{--<div class="container">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-sm-8 col-md-7 py-4">--}}
-    {{--<h4 class="text-white">About</h4>--}}
-    {{--<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>--}}
-    {{--</div>--}}
-    {{--<div class="col-sm-4 offset-md-1 py-4">--}}
-    {{--<h4 class="text-white">Contact</h4>--}}
-    {{--<ul class="list-unstyled">--}}
-    {{--<li><a href="#" class="text-white">Follow on Twitter</a></li>--}}
-    {{--<li><a href="#" class="text-white">Like on Facebook</a></li>--}}
-    {{--<li><a href="#" class="text-white">Email me</a></li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="navbar navbar-dark bg-dark shadow-sm">--}}
-    {{--<div class="container d-flex justify-content-between">--}}
-    {{--<a href="#" class="navbar-brand d-flex align-items-center">--}}
-    {{--<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>--}}
-    {{--<strong>Album</strong>--}}
-    {{--</a>--}}
-    {{--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">--}}
-    {{--<span class="navbar-toggler-icon"></span>--}}
-    {{--</button>--}}
-    {{--</div>--}}
-    {{--</div>--}}
+
 </header>
 
-<main role="main">
+<main role="main" class="bg-success">
 
     <section class="jumbotron text-center">
         <div class="container">
-            <img class="mb-4" src="{{asset('img/fav_logo.png')}}" alt="" width="72" height="72">
-            <h1 class="jumbotron-heading">Bienvenue Dans le magasin .....</h1>
-            <h6>Nombre de telephone réparé ce mois-ci: ...</h6>
-            <h6>Nombre de telephone en cours de réparation: ...</h6>
+            <img class="mb-4" src="{{asset('img/fav_logo.png')}}" alt="" width="100" height="100">
+            <h1 class="jumbotron-heading text-capitalize font-weight-bold">Bienvenue Dans le magasin .....</h1>
+            <h6 class="text-success font-weight-bold">Nombre de telephone réparé ce mois-ci: ...</h6>
+            <h6 class="text-danger font-weight-bold">Nombre de telephone en cours de réparation: ...</h6>
 
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-dark">
         <div class="container">
 
             <div class="row">
@@ -70,10 +42,9 @@
                     <div class="card mb-4 shadow-sm">
                         <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=CHOIX MAGASIN" alt="Card image cap">
                         <div class="card-body">
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+                            <div class="d-flex justify-content-between align-items-center card text-center">
+                                <div class="btn-group btn-block">
+                                    <a href="/" class="btn btn-sm btn-outline-success btn-block">Voir</a>
                                 </div>
                             </div>
                         </div>
@@ -81,12 +52,12 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=AJOUTER UNE REPARATION" alt="Card image cap">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=AJOUTER UNE REPARATION" alt="">
                         <div class="card-body">
 
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+                                <div class="btn-group btn-block">
+                                    <a href="/login/reparation" class="btn btn-sm btn-outline-success btn-block">Voir</a>
                                 </div>
                             </div>
                         </div>
@@ -94,51 +65,43 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=STOCK" alt="Card image cap">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=STOCK" alt="">
                         <div class="card-body">
 
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+                                <div class="btn-group btn-block">
+                                    <button type="button" class="btn btn-sm btn-outline-success btn-block">Voir</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-3">
                     <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=TARIFS" alt="Card image cap">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=TARIFS" alt="">
                         <div class="card-body">
 
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+                                <div class="btn-group btn-block">
+                                    <button type="button" class="btn btn-sm btn-outline-success btn-block">Voir</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </div>
 
 </main>
 
-<footer class="text-muted">
-    {{--<div class="container">--}}
-    {{--<p class="float-right">--}}
-    {{--<a href="#">Back to top</a>--}}
-    {{--</p>--}}
-    {{--<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>--}}
-    {{--<p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>--}}
-    {{--</div>--}}
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; Repare-ton-mobile</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
 </footer>
 
 <!-- Bootstrap core JavaScript

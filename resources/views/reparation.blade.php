@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,111 +20,139 @@
 
 <div class="container">
     <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="{{asset('img/fav_logo.png')}}" alt="" width="72" height="72">
-        <h2>ajout d'une réparation</h2>
+        <img class="d-inline-block  mb-6" src="{{asset('img/fav_logo.png')}}" alt="" width="100" height="100">
+        <h2>AJOUT D'UNE REPARATION</h2>
+    </div>
+{{-- INFORMATION APPAREIL--}}
+     <div class="col-md-12 order-md-1">
+        <h4 class="mb-3 text-center text-primary">INFORMATION APPAREIL</h4>
+        <form class="needs-validation" novalidate>
 
+                <div class="mb-3">
+                    {{-- MARQUE --}}
+                    <label for="marque">Marque</label>
+                    <input type="text" class="form-control" id="marque" placeholder="Apple" value="" required>
+                    <div class="invalid-feedback">
+                        Merci d'entrée une Marque.
+                    </div>
+                </div>
+                {{-- MODELE --}}
+                <div class="mb-3">
+                    <label for="modele">Modele</label>
+                    <input type="text" class="form-control" id="modele" placeholder="iPhone" value="" required>
+                    <div class="invalid-feedback">
+                        Merci d'entrée un Modele.
+                    </div>
+                </div>
+
+
+            {{-- IMEI --}}
+            <div class="mb-3">
+                <label for="imei">IMEI </label>
+                <input type="number" class="form-control" id="imei" required>
+                <div class="invalid-feedback">
+                    Merci d'ajouter un IMEI.
+                </div>
+            </div>
+            {{-- PRIX --}}
+            <div class="mb-3">
+                <label for="prix">PRIX</label>
+                <input type="text" class="form-control" id="prix" placeholder="25€" required>
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+            {{-- REPARATION --}}
+            <div class="mb-3">
+                <label for="reparation">Réparation </label>
+                <input type="text" class="form-control" id="reparation" placeholder="exemple : Changement LCD" required>
+            </div>
+
+            <hr class="mb-4">
+
+        </form>
     </div>
 
+    {{-- INFORMATION CLIENT --}}
+    <div class="col-md-12 order-md-1">
+        <h4 class="mb-3 text-center text-primary">INFORMATION CLIENT</h4>
+        <form class="needs-validation" novalidate>
 
-        <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">Information Client</h4>
-            <form class="needs-validation" novalidate>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="firstName">Prénom</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid first name is required.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="lastName">Nom</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
+            <div class="mb-3">
+                {{-- PRENOM --}}
+                <label for="firstName">Prénom</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid first name is required.
                 </div>
-
-
-
-                <div class="mb-3">
-                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                    <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                    </div>
+            </div>
+            {{-- NOM --}}
+            <div class="mb-3">
+                <label for="lastName">Nom</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid last name is required.
                 </div>
+            </div>
 
-                <div class="mb-3">
-                    <label for="address">Adresse</label>
-                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                    <div class="invalid-feedback">
-                        Please enter your shipping address.
-                    </div>
+            {{-- EMAIL --}}
+            <div class="mb-3">
+                <label for="email">Email </label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
                 </div>
-
-                <div class="mb-3">
-                    <label for="address2">Complément d'adresse <span class="text-muted">(Optional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+            {{-- ADRESSE --}}
+            <div class="mb-3">
+                <label for="address">Adresse</label>
+                <input type="text" class="form-control" id="address" placeholder="55 avenue hoche" required>
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
                 </div>
-
-                <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <label for="country">Pays</label>
-                        <select class="custom-select d-block w-100" id="country" required>
-                            <option value="">Choisir...</option>
-                            <option>France</option>
-                            <option>Espagne</option>
-                            <option>Allemagne</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid country.
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 mb-3">
-                        <label for="zip">Code Postale</label>
-                        <input type="text" class="form-control" id="zip" placeholder="" required>
-                        <div class="invalid-feedback">
-                            Code postale Obligatoire.
-                        </div>
-                    </div>
+            </div>
+            {{-- COMPLEMENT ADRESSE--}}
+            <div class="mb-3">
+                <label for="address2">Complément d'adresse <span class="text-muted">(Facultatif)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="">
+            </div>
+            {{-- CODE POSTALE --}}
+            <div class="mb-3">
+                <label for="zip">Code Postale</label>
+                <input type="number" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                    Code postale Obligatoire.
                 </div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="same-address">
-                    <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+            </div>
+
+            <hr class="mb-4">
+
+
+            <h4 class="mb-3">Paiement</h4>
+
+            <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credit">Carte Bleu</label>
                 </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="save-info">
-                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                <div class="custom-control custom-radio">
+                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="debit">Chéque</label>
                 </div>
-                <hr class="mb-4">
-
-                <h4 class="mb-3">Paiement</h4>
-
-                <div class="d-block my-3">
-                    <div class="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                        <label class="custom-control-label" for="credit">Carte Bleu</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="debit">Chéque</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="paypal">Especes</label>
-                    </div>
+                <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="paypal">Especes</label>
                 </div>
+            </div>
 
 
-                <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Valider la demande de réparation</button>
-            </form>
-        </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Valider la demande de réparation</button>
+        </form>
     </div>
+</div>
+</div>
+
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; Repare-ton-mobile</p>

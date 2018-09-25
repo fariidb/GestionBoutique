@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,12 +19,11 @@
 
 <body class="text-center">
 <form class="form-signin">
-    <img class="mb-4" src="{{asset('img/fav_logo.png')}}" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Bienvenue merci de vous identifiez</h1>
+    <img class="mb-4" src="{{asset('img/fav_logo.png')}}" alt="" width="100" height="100">
     <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
 
